@@ -322,12 +322,186 @@ function postRequest() {
 	}else if (male === "Clare") {
 	
 		d3.select("svg").remove();
-		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+		if(female === "Carlow"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Carlow Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Cavan"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Cavan Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Clare"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Clare Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Cork"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Cork Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Dublin"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Dublin Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Donegal"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Donegal Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Galway"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Galway Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Kerry"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Kerry Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Kildare"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Kildare Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Kilkenny"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Kilkenny Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Laois"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Laois Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Leitrim"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Leitrim Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Limerick"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Limerick Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Longford"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Longford Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Louth"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Louth Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Mayo"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Mayo Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Meath"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Meath Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Monaghan"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Monaghan Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Cork"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Cork Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "North Tipperary"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'North Tipperary Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Offaly"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Offaly Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Roscommon"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Roscommon Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Sligo"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Sligo Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Cork"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Cork Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "South Tipperary"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'South Tipperary Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Waterford"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Waterford Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Westmeath"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Westmeath Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Wexford"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Wexford Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Wicklow"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Clare Male'}), (m:County {County:'Wicklow Female'})  RETURN (n.Population), (m.Population)"};				
+		}
 								
 	}else if (male === "Cork") {
 	
 		d3.select("svg").remove();
-		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+		if(female === "Carlow"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Carlow Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Cavan"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Cavan Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Clare"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Clare Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Cork"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Cork Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Dublin"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Dublin Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Donegal"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Donegal Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Galway"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Galway Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Kerry"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Kerry Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Kildare"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Kildare Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Kilkenny"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Kilkenny Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Laois"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Laois Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Leitrim"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Leitrim Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Limerick"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Limerick Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Longford"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Longford Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Louth"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Louth Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Mayo"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Mayo Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Meath"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Meath Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Monaghan"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Monaghan Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Cork"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Cork Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "North Tipperary"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'North Tipperary Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Offaly"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Offaly Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Roscommon"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Roscommon Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Sligo"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Sligo Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Cork"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Cork Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "South Tipperary"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'South Tipperary Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Waterford"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Waterford Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Westmeath"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Westmeath Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Wexford"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Wexford Female'})  RETURN (n.Population), (m.Population)"};				
+		}else if(female === "Wicklow"){
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Cork Male'}), (m:County {County:'Wicklow Female'})  RETURN (n.Population), (m.Population)"};				
+		}
 								
 	}else if (male === "Dublin") {
 		if(valf === "Carlow"){

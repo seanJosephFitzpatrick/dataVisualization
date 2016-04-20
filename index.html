@@ -30,6 +30,7 @@
 </head>
 
 <body>
+	<div id="canvas"></div>
 
     <h1 align="center">Population of Ireland by County and Gender CSO 2011</h1>
     <form>
@@ -37,7 +38,7 @@
           <legend>Male Female</legend>
           <p>
              <label>Select County</label>
-             <select id = "countyList" onchange="postRequest()" onchange="window.location.reload()">
+             <select id = "countyList" onchange="postRequest()">
 			
 			   
 			   <option value = "Carlow">Carlow</option>
@@ -74,23 +75,94 @@
 <button onclick="Pie()" >Pie</button>
 <button onclick="Bar()" >Bar</button>
 
+
 	<script type="text/javascript">
 	var county = countyList.value;
 function postRequest() {
 
-	//set county list selected value
-	var query;
-	var val = countyList.value
+	//set county list selected value    
+	var	a,
+		b,
+		d,
+		g,
+		x,
+		y,
+		arc,
+		svg,
+        delay = 500,
+		query,
+		val = countyList.value;
 	
 	if (val === "Carlow") {
 	
-			query = {"query" : "MATCH (n:County {County:'Carlow'}) RETURN (n.Population)"};
-		
-	} else if (val === "Dublin") {
+			d3.select("svg").remove();
+			query = {"query" : "MATCH (n:County {County:'Carlow'}) RETURN (n.Population)"};	
+
+	} else if (val === "Cavan") {
 	
-		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};
-		
-		
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Clare") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Cork") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Dublin") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Donegal") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Galway") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Kerry") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Kildare") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Kilkenny") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Laoise") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Leitrim") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Limerick") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
+	}else if (val === "Longford") {
+	
+		d3.select("svg").remove();
+		query = {"query" : "MATCH (n:County {County:'Dublin'}) RETURN (n.Population)"};	
+								
 	}
 	
 	//Asynchronous JavaScript and XML  - Request data qithout refreshing entire page
@@ -109,6 +181,7 @@ function postRequest() {
 		
 		//On success call callback function
 		success: callback,
+		
 		//Error function
 		error: function (jqXHR, exception) {
 			var msg = '';
@@ -136,39 +209,22 @@ function postRequest() {
 
 postRequest();
 
+
 //callback function
 function callback(data){
-	arr = $.map(data, function(el) { return el });
-	a = arr[1][0]
-	b = arr[2][0]
 	
-}//callback
-
-function reloadPage(){
-	window.location.reload();
-}
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/*
-*This section of code below was acquired online at [https://bl.ocks.org/LiangGou/30e9af0d54e1d5287199]
-*/
-
-	var x,
-        y,
-		a,
-		b,
-		d,
-		w = 920,
-		h = 400,
-        duration = 2000,
-        delay = 500;
-
+	arr = $.map(data, function(el) { return el });
+	var a = arr[1][0]
+	var b = arr[2][0]
+	
+	console.log(a);
+	
 	//D3 color scale 10,20,20b each one contains a unique set of colors 
     var color = d3.scale.category10();
 	
 	//Adding an SVG element to the canvas
-    var svg = d3.select("body").append("svg")
+	svg = d3.select("body")
+		.append("svg")
 		//set width of canvas
 		.attr("width", "960")
 		//set height of canvas
@@ -183,7 +239,7 @@ function reloadPage(){
 	
 		
     }, {
-        Text: arr[2][0],//women
+        Text: arr[2][0],//men
 		population: b
 		
     }]
@@ -195,14 +251,14 @@ function reloadPage(){
     x.domain(data.map(function(d) {
             return d.Text;
         }))
-        .rangeRoundBands([0, w], .2);
+        .rangeRoundBands([0, 920], .2);
 
     var pie = d3.layout.pie()
         .value(function(d) {
             return d.population;
         });
-
-    var arc = d3.svg.arc();
+	//arc generat
+    arc = d3.svg.arc();
 
     y.domain([0, d3.max(data.map(function(d) {
             return d.population;
@@ -233,36 +289,44 @@ function reloadPage(){
         .attr("width", x.rangeBand())
         .attr("height", function(d) {
                 //return h - y(d.data.population);
-				return h - y(d.data.population);
+				return 400 - y(d.data.population);
             });
             
-    //draw bar chart first 
-        
-        g.append("path")
-        .style("fill", function(d) {
-            return color(d.data.Text);
+	  	g.append("path")
+			.style("fill", function(d) {
+				return color(d.data.Text);
+				
+			});
+			//draw text
+			g.append("text")
+			.attr("transform", function(d){
+				return "translate(" + (x(d.data.Text)+x.rangeBand()/3) + "," + (400+20) + ")";
+			})
+			.text(function(d) {
+				return d.data.Text;
+			});
 			
-        });
-		//draw text
-        g.append("text")
-        .attr("transform", function(d){
-            return "translate(" + (x(d.data.Text)+x.rangeBand()/3) + "," + (h+20) + ")";
-        })
-        .text(function(d) {
-            return d.data.Text;
-        });
+			
+			
+			
+	
+}//callback
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-		
+/*
+*This section of code below was acquired online at [https://bl.ocks.org/LiangGou/30e9af0d54e1d5287199]
+*/
+
 function Pie(){
 
 	var g = svg.selectAll(".symbol");
-
+	
 		g.selectAll("rect").remove();
 
 		g.selectAll("path")
 			.transition()
-			.duration(duration)//takes two seconds duration
+			.duration(2000)//takes two seconds duration
 			.tween("arc", animate);
 			
 		j=2;//set variables j = 2
@@ -271,13 +335,14 @@ function Pie(){
 }//Pie()
 
 function Bar(){
+
 	var g = svg.selectAll(".symbol");
 
 		g.selectAll("rect").remove();
-
+		
 		g.selectAll("path")
 			.transition()
-			.duration(duration)//takes two seconds duration
+			.duration(2000)//takes two seconds duration
 			.tween("arc", animate);
 			
 		j=1;//set variable j = 1
@@ -290,18 +355,18 @@ function animate(d) {
 	var path = d3.select(this),
 		text = d3.select(this.parentNode).select("text"),
 		x0 = x(d.data.Text),
-		y0 = h - y(d.data.population); //initial height
+		y0 = 400 - y(d.data.population); //initial height
 
 	return function(t) {
 	if(j == 1)//if true to bar else to pie
 		t = 1-t;
-		var r = h / 2 / Math.min(1, t + 1e-3),
+		var r = 400 / 2 / Math.min(1, t + 1e-3),
 			//a is stepping factor, starting from 1 to 0,
 			//as the timer t goes.
 			//A simper alternative: a = 1 - t;
 			a = Math.cos(t * Math.PI / 2),
-			xx = (-r + (a) * (x0 + x.rangeBand()) + (1 - a) * (w + h) / 2),
-			yy = ((a) * h + (1 - a) * h / 2),
+			xx = (-r + (a) * (x0 + x.rangeBand()) + (1 - a) * (920 + 400) / 2),
+			yy = ((a) * 400 + (1 - a) * 400 / 2),
 			f = {
 				innerRadius: (r - x.rangeBand() / (2 - a)) * a,
 				//innerRadius: 80,

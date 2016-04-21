@@ -3,35 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-	
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="http://d3js.org/d3.v3.min.js"></script>
+	
 	<script src="jquery-2.2.3.js"></script>
 	<script src="postRequest.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 
     <title>Data visualization</title>
 	
-	    <style type="text/css">
-        body {
-            background-color: white;
-        }
-        
-        svg {
-		//center canvas
-            padding: 0;
-            margin: auto;
-            display: block;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-    </style>
+	
 </head>
 
 <body>
-	<div id="canvas"></div>
+	
 
     <h1 align="center">Population of Ireland by County and Gender CSO 2011</h1>
     <form>
@@ -113,8 +98,8 @@
           </p>
        
     </form>
-<button onclick="Pie()" >Pie</button>
-<button onclick="Bar()" >Bar</button>
+<button id="btnPie" onclick="Pie()" >Pie</button>
+<button id="btnBar" onclick="Bar()" >Bar</button>
 
 
 	<script type="text/javascript">

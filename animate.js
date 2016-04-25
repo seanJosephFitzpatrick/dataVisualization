@@ -83,6 +83,7 @@ function animate(d) {
 		//D3 color scale 10,20,20b each one contains a unique set of colors 
 		var color = d3.scale.category10();
 		
+		
 		//Adding an SVG element to the canvas
 		svg = d3.select("body")
 			.append("svg")

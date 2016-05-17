@@ -55,8 +55,6 @@ function animate(d) {
 			yy = ((a) * 400 + (1 - a) * 400 / 2),
 			f = {
 				innerRadius: (r - x.rangeBand() / (2 - a)) * a,
-				//innerRadius: 80,
-				//pie chart: (r - x.rangeBand() / (2 - a)) * a,
 				outerRadius: r,
 				startAngle: a * (Math.PI / 2 - y0 / r) + (1 - a) * d.startAngle,
 				endAngle: a * (Math.PI / 2) + (1 - a) * d.endAngle

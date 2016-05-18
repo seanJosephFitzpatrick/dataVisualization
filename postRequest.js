@@ -11,13 +11,21 @@ function postRequest() {
 		//Store cypher query in variable query
 		query,
 		//Store drop down list value in variable val
+		username = "neo4j";
+		password = "*********";
 		male = countyListm.value;
 		female = countyListf.value;
 	
 	
 	qstring = "MATCH (n:County_population {County:\'" + male + " Male\'}), (m:County_population {County:\'"+ female + " Female\'})  RETURN (n.Population), (m.Population)";
 	d3.select("svg").remove();
-	query = {"query" : qstring};				
+	query = {"query" : qstring};
+
+	//$.ajaxSetup({
+		//headers: { 
+			//"Authorization": 'Basic ' + window.btoa(username+":"+password)
+		//}
+		//});
 		
 	//Asynchronous JavaScript and XML  - Request data qithout refreshing entire page
 	$.ajax({

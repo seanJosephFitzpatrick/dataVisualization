@@ -32,8 +32,7 @@ function postRequest() {
 		//POST Request
 		type: "POST",
 		//async: false,
-		//Server url
-		url: "http://g00294191.cloudapp.net:7474/db/data/cypher",
+        url: "http://localhost:7474/db/data/cypher",
 		//Request JSON
 		dataType: "json",
 		//Cypher query

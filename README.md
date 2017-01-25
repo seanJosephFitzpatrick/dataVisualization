@@ -5,7 +5,7 @@ The database will be hosted on a cloud computing platform called Windows Azure  
 
 ## Getting Started         
 
-Download zip here [Data Visualization](https://github.com/seanJosephFitzpatrick/dataVisualization)               
+Download zip here [Data Visualization](https://github.com/seanJosephFitzpatrick/dataVisualization/archive/master.zip)               
 
 ### Prerequisites          
 
@@ -32,3 +32,5 @@ To run the application launch the index.html by right clicking and open with fir
 [Sean Fitzpatrick](https://github.com/seanJosephFitzpatrick)                    
 
 ## License
+
+[MIT](https://github.com/seanJosephFitzpatrick/dataVisualization/blob/master/LICENSE) 

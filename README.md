@@ -1,7 +1,6 @@
 # Data Visualization         
 
-This project is based on Data Visualization. Visually representing data using visual aids such as charts. The data will be held on a Neo4j Graph database.                   
-The database will be hosted on a cloud computing platform called Windows Azure  that allows end users to host applications on virtual machines, servers and databases. The languages used for the Data Visualization project will be HTML  Hyper Text Markup Language, JavaScript  and JQuery . The client side application will be rendered and loaded in the browser.          
+This project is based on Data Visualization. Visually representing data using visual aids such as charts. The data will be held on a Neo4j Graph database.                            
 
 ![image](https://user-images.githubusercontent.com/9217947/41093823-9ae4d730-6a4c-11e8-99e2-9be0dc580e07.PNG)           
 

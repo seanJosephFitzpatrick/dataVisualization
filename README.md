@@ -1,8 +1,11 @@
 # Data Visualization         
 
-This project is based on Data Visualization. Visually representing data using visual aids such as charts. The data will be held on a Neo4j Graph database.                            
+![image](https://user-images.githubusercontent.com/9217947/41093823-9ae4d730-6a4c-11e8-99e2-9be0dc580e07.PNG) 
 
-![image](https://user-images.githubusercontent.com/9217947/41093823-9ae4d730-6a4c-11e8-99e2-9be0dc580e07.PNG)           
+3rd year Software Development project. The project uses the D3.js API to create charts from data accessed via Representational State Transfer (REST) API using AJAX POST request. The data consists of female/male population by county in Ireland from the Central Statistics Office (CSO). This data is stored on a Neo4J graph database. The user is able to select different counties in Ireland and view the population as pie/bar chart.
+
+Languages, Technologies and Implementation Architecture used for this project:
+* JavaScript, HTML/CSS, D3.js, Neo4J Database, JQuery, AJAX, Azure.
 
 ## Getting Started         
 

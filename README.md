@@ -5,7 +5,7 @@
 3rd year Software Development project. The project uses the D3.js API to create charts from data accessed via Representational State Transfer (REST) API using AJAX POST request. The data consists of female/male population by county in Ireland from the Central Statistics Office (CSO). This data is stored on a Neo4J graph database. The user is able to select different counties in Ireland and view the population as pie/bar chart.
 
 Languages, Technologies and Implementation Architecture used for this project:
-* JavaScript, HTML/CSS, D3.js, Neo4J Database, JQuery, AJAX, Azure.
+* JavaScript, HTML, CSS, D3.js, Neo4J Database, JQuery, AJAX, Azure.
 
 ## Getting Started         
 
